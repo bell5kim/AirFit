@@ -1,0 +1,1138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AirFit</class>
+ <widget class="QMainWindow" name="AirFit">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>954</width>
+    <height>742</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Beam Geometry Fitting</string>
+  </property>
+  <widget class="QWidget" name="widget">
+   <widget class="QLabel" name="textLabelMachine">
+    <property name="geometry">
+     <rect>
+      <x>711</x>
+      <y>7</y>
+      <width>230</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Machine Name</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="wordWrap">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>30</y>
+      <width>230</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="tab1">
+     <attribute name="title">
+      <string>Fit (&amp;1)</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBoxComponent">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>210</width>
+        <height>311</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Primary and Scatter Parameters</string>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <widget class="CheckSpinSliderBox" name="widgetP0" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>30</y>
+         <width>201</width>
+         <height>70</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="CheckSpinSliderBox" name="widgetS0" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>100</y>
+         <width>201</width>
+         <height>70</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="CheckSpinSliderBox" name="widgetSS" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>170</y>
+         <width>201</width>
+         <height>70</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonCheckPS">
+       <property name="geometry">
+        <rect>
+         <x>40</x>
+         <y>260</y>
+         <width>130</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="text">
+        <string>Toggle All Check&amp;s</string>
+       </property>
+       <property name="shortcut">
+        <string>Alt+S</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab2">
+     <attribute name="title">
+      <string>Fit (&amp;2)</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBoxFluence">
+      <property name="geometry">
+       <rect>
+        <x>3</x>
+        <y>7</y>
+        <width>221</width>
+        <height>451</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Fluence Shape Parameters</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+      <widget class="CheckSpinSliderBox" name="widgetH0" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>30</y>
+         <width>221</width>
+         <height>70</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="CheckSpinSliderBox" name="widgetH1" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>100</y>
+         <width>221</width>
+         <height>70</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="CheckSpinSliderBox" name="widgetH2" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>170</y>
+         <width>221</width>
+         <height>70</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="CheckSpinSliderBox" name="widgetH3" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>240</y>
+         <width>221</width>
+         <height>70</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="CheckSpinSliderBox" name="widgetH4" native="true">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>310</y>
+         <width>221</width>
+         <height>70</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonCheckH">
+       <property name="geometry">
+        <rect>
+         <x>7</x>
+         <y>403</y>
+         <width>100</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Toggle &amp;All</string>
+       </property>
+       <property name="shortcut">
+        <string>Alt+A</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonCheckZero">
+       <property name="geometry">
+        <rect>
+         <x>114</x>
+         <y>403</y>
+         <width>100</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Set All to &amp;Zero</string>
+       </property>
+       <property name="shortcut">
+        <string>Alt+Z</string>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab3">
+     <attribute name="title">
+      <string>Plot (&amp;3)</string>
+     </attribute>
+     <widget class="QCheckBox" name="checkBoxAutoPlot">
+      <property name="geometry">
+       <rect>
+        <x>28</x>
+        <y>480</y>
+        <width>170</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Auto Tab Switching</string>
+      </property>
+      <property name="shortcut">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="yListBox">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>157</y>
+        <width>170</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>New Item</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="textLabelY">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>140</y>
+        <width>140</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Y Profiles</string>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="xListBox">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>170</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>New Item</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="textLabelZ">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>278</y>
+        <width>140</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Z Profiles</string>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="textLabelX">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>14</y>
+        <width>140</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>X Profiles</string>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="zListBox">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>296</y>
+        <width>170</width>
+        <height>120</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>New Item</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QGroupBox" name="groupBoxLegend">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>420</y>
+        <width>171</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Legend and Axis Display</string>
+      </property>
+      <widget class="QRadioButton" name="radioButtonLegend">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>70</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Legend</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="radioButtonDD">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>20</y>
+         <width>71</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>DD(%)</string>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab4">
+     <attribute name="title">
+      <string>I/O (&amp;4)</string>
+     </attribute>
+     <widget class="QGroupBox" name="groupBoxInput">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>230</width>
+        <height>280</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Input Parameters</string>
+      </property>
+      <widget class="QLineEdit" name="lineEditE">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>114</x>
+         <y>27</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEditZ0">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>114</x>
+         <y>47</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEditZI">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>114</x>
+         <y>147</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEditZN">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>114</x>
+         <y>207</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEditZM">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>114</x>
+         <y>87</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEditZY">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>114</x>
+         <y>127</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEditXN">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>114</x>
+         <y>167</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEditZX">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>114</x>
+         <y>107</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEditWYN">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>114</x>
+         <y>247</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEditYN">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>114</x>
+         <y>187</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEditWXN">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>114</x>
+         <y>227</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="lineEditZS">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>114</x>
+         <y>67</y>
+         <width>71</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonZM">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>87</y>
+         <width>60</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ZM:</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonZ0">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>47</y>
+         <width>60</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Z0:</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonXN">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>167</y>
+         <width>60</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>XN:</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonYN">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>187</y>
+         <width>60</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>YN:</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonZY">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>127</y>
+         <width>60</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ZY:</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonWYN">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>247</y>
+         <width>60</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>WYN:</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonZN">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>207</y>
+         <width>60</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ZN:</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+       <property name="autoRepeat">
+        <bool>false</bool>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonE">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>27</y>
+         <width>60</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+       <property name="text">
+        <string>E</string>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonWXN">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>227</y>
+         <width>60</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>WXN:</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonZX">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>107</y>
+         <width>60</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ZX:</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonZS">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>67</y>
+         <width>60</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ZS:</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButtonZI">
+       <property name="geometry">
+        <rect>
+         <x>24</x>
+         <y>147</y>
+         <width>60</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>ZI:</string>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="textLabelChi">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>363</y>
+        <width>48</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Chi (%):</string>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="textLabelDev">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>393</y>
+        <width>52</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Dev (%):</string>
+      </property>
+      <property name="wordWrap">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditDev">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>393</y>
+        <width>100</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEditChi">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>363</y>
+        <width>100</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBoxMX">
+      <property name="geometry">
+       <rect>
+        <x>18</x>
+        <y>304</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use ZM instead ZX</string>
+      </property>
+      <property name="shortcut">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBoxMY">
+      <property name="geometry">
+       <rect>
+        <x>18</x>
+        <y>328</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use ZM instead ZY</string>
+      </property>
+      <property name="shortcut">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="plotButton">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>470</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&amp;Plot Update</string>
+      </property>
+      <property name="shortcut">
+       <string>Alt+P</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBoxVersion">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>440</y>
+        <width>140</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use Old AFIT</string>
+      </property>
+      <property name="shortcut">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="interruptButton">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>577</y>
+      <width>70</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&amp;Cancel</string>
+    </property>
+    <property name="shortcut">
+     <string>Alt+C</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="editButton">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>577</y>
+      <width>80</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&amp;Edit</string>
+    </property>
+    <property name="shortcut">
+     <string>Alt+E</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="doneButton">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>612</y>
+      <width>70</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&amp;Done</string>
+    </property>
+    <property name="shortcut">
+     <string>Alt+D</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="resetButton">
+    <property name="geometry">
+     <rect>
+      <x>799</x>
+      <y>577</y>
+      <width>60</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&amp;Reset</string>
+    </property>
+    <property name="shortcut">
+     <string>Alt+R</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fitButton">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>612</y>
+      <width>150</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&amp;Fit</string>
+    </property>
+    <property name="shortcut">
+     <string>Alt+F</string>
+    </property>
+   </widget>
+   <widget class="MyPlot" name="myPlot" native="true">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>671</width>
+      <height>631</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CheckSpinSliderBox</class>
+   <extends>QWidget</extends>
+   <header location="global">checkspinsliderbox.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MyPlot</class>
+   <extends>QWidget</extends>
+   <header location="global">myplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>interruptButton</tabstop>
+  <tabstop>fitButton</tabstop>
+  <tabstop>plotButton</tabstop>
+  <tabstop>doneButton</tabstop>
+  <tabstop>resetButton</tabstop>
+  <tabstop>lineEditZM</tabstop>
+  <tabstop>pushButtonWYN</tabstop>
+  <tabstop>lineEditZX</tabstop>
+  <tabstop>lineEditXN</tabstop>
+  <tabstop>pushButtonZ0</tabstop>
+  <tabstop>pushButtonZM</tabstop>
+  <tabstop>lineEditZ0</tabstop>
+  <tabstop>lineEditZI</tabstop>
+  <tabstop>lineEditYN</tabstop>
+  <tabstop>lineEditWYN</tabstop>
+  <tabstop>pushButtonZX</tabstop>
+  <tabstop>lineEditZY</tabstop>
+  <tabstop>pushButtonZI</tabstop>
+  <tabstop>pushButtonZY</tabstop>
+  <tabstop>pushButtonE</tabstop>
+  <tabstop>lineEditWXN</tabstop>
+  <tabstop>pushButtonZN</tabstop>
+  <tabstop>pushButtonYN</tabstop>
+  <tabstop>pushButtonZS</tabstop>
+  <tabstop>pushButtonXN</tabstop>
+  <tabstop>lineEditZS</tabstop>
+  <tabstop>pushButtonWXN</tabstop>
+  <tabstop>lineEditZN</tabstop>
+  <tabstop>lineEditE</tabstop>
+  <tabstop>lineEditChi</tabstop>
+  <tabstop>lineEditDev</tabstop>
+  <tabstop>editButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
